@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
+"""
+	遗传算法GA包
 
+	Author:	Greatpan
+	Date:	2018.11.13
+"""
 import random
 
-class GA(object):
+class GAList(object):
 	"""
-		类名：GA
-		类说明：	遗传算法类
+		类名：GAList
+		类说明：	遗传算法类,一个GA类包含了一个种群,及其种群内的信息
 	"""
 	def __init__(self, aCrossRate, aMutationRage, aUnitCount, aGeneLenght, aMatchFun=lambda : 1):
 		""" 构造函数 """

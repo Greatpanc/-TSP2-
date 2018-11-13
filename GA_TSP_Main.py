@@ -1,5 +1,13 @@
 # -*- encoding: utf-8 -*-
-from GA import GA
+
+"""
+	TSP问题GA求解包
+	
+	Author:	Greatpan
+	Date:	2018.11.13
+"""
+
+from GA import GAList
 from MyFuncTool import GetData,ResultShow,draw
 
 class TSP(object):
@@ -9,11 +17,11 @@ class TSP(object):
 		self.dist=Dist								# 城市距离矩阵
 		self.citynum=CityNum						# 城市数量
 
-		self.ga = GA(aCrossRate=0.7,				# 交叉率
-					aMutationRage=0.02,				# 突变概率
-					aUnitCount=100,					# 一个种群中的个体数
-					aGeneLenght=self.citynum,		# 基因长度（城市数）
-					aMatchFun=self.matchFun())		# 适配函数
+		self.ga =GAList(aCrossRate=0.7,				# 交叉率
+						aMutationRage=0.02,			# 突变概率
+						aUnitCount=100,				# 一个种群中的个体数
+						aGeneLenght=self.citynum,	# 基因长度（城市数）
+						aMatchFun=self.matchFun())	# 适配函数
 
 	def distance(self, path):
 		"""

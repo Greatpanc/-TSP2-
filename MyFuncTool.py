@@ -12,13 +12,8 @@ import matplotlib.pyplot as plt
 
 class Node:
 	"""
-	类名：Node
-	函数功能：	从外界读取城市数据并处理
-		输入	无
-		输出	1 Position：各个城市的位置矩阵
-			2 CityNum：城市数量
-			3 Dist：城市间距离矩阵
-	其他说明：无
+		类名：Node
+		类说明：	城市节点类
 	"""
 	def __init__(self,CityNum):
 		"""
@@ -66,13 +61,13 @@ def GetData(datapath):
 
 def ResultShow(Min_Path,BestPath,CityNum,string):
 	"""
-	函数名：GetData()
-	函数功能：	从外界读取城市数据并处理
-		输入	无
-		输出	1 Position：各个城市的位置矩阵
-			2 CityNum：城市数量
-			3 Dist：城市间距离矩阵
-	其他说明：无
+		函数名：GetData()
+		函数功能：	从外界读取城市数据并处理
+			输入	无
+			输出	1 Position：各个城市的位置矩阵
+				2 CityNum：城市数量
+				3 Dist：城市间距离矩阵
+		其他说明：无
 	"""
 	print("基于"+string+"求得的旅行商最短路径为：")
 	for m in range(CityNum):
@@ -83,13 +78,13 @@ def ResultShow(Min_Path,BestPath,CityNum,string):
 
 def draw(BestPath,Position,title):
 	"""
-	函数名：draw(BestPath,Position,title)
-	函数功能：	通过最优路径将旅行商依次经过的城市在图表上绘制出来
-		输入	1 	BestPath：最优路径
-			2	Position：各个城市的位置矩阵
-			3	title:图表的标题
-		输出	无
-	其他说明：无
+		函数名：draw(BestPath,Position,title)
+		函数功能：	通过最优路径将旅行商依次经过的城市在图表上绘制出来
+			输入	1 	BestPath：最优路径
+				2	Position：各个城市的位置矩阵
+				3	title:图表的标题
+			输出	无
+		其他说明：无
 	"""
 	plt.title(title) 
 	plt.plot(Position[:,0],Position[:,1],'bo')
